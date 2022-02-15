@@ -19,5 +19,4 @@ steps:
     packageType: 'sdk'
     version: '6.0.x'
 - script : dotnet build --configuration $(buildConfiguration)
-  displayName: 'Build $(buildConfiguration)'
-- 
+  displayName: "Build $(buildConfiguration)"
