@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2019'
 
 variables:
   solution: '**/*.sln'
@@ -16,8 +16,11 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
-
+  inputs:
+    versionSpec: 
+    checkLatest: true
 - task: NuGetCommand@2
+
   inputs:
     restoreSolution: '$(solution)'
 
